@@ -1,3 +1,20 @@
-.title {
-  color: red;
+@import '../../styles/default.less';
+@import '../../styles//theme/base.less';
+
+.btn {
+  width: @size-18;
+  height: @size-7;
+  color: @color-white;
+  font-weight: @font-weight-400;
+  background-color: @color-primary-6;
+  border: none;
+  border-radius: 1px;
+  &:hover {
+    cursor: pointer;
+    opacity: @opacity-8;
+  }
+}
+
+.btn-primary {
+  .btn();
 }

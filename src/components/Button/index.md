@@ -12,7 +12,9 @@ Demo:
 import React from 'react';
 import { Button } from 'moon-ui';
 
-export default () => <Button title="First Demo" />;
+export default () => (
+  <Button type="primary" onClick={() => console.log('test')}>
+    测试
+  </Button>
+);
 ```
-
-More skills for writing demo: https://d.umijs.org/guide/basic#write-component-demo
