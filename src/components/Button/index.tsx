@@ -1,5 +1,5 @@
 import React, { FC, ReactElement } from 'react';
-import { IconLoading } from '@arco-iconbox/react-moon-icons';
+import { Loading3QuartersOutlined } from '@ant-design/icons';
 import { ButtonProps } from './interface';
 import classNames from 'classnames';
 import './index.less';
@@ -11,8 +11,10 @@ const Button: FC = ({
   type = 'primary',
   onClick,
   loading,
+  icon,
+  iconPosition = 'left',
 }: ButtonProps): ReactElement => {
-  const classes = classNames(`btn-${type}`, className);
+  const classes = classNames(`button-${type}`, 'button-new');
 
   const handleClick: React.MouseEventHandler<HTMLElement> = (event: any): void => {
     if (loading) {
@@ -24,7 +26,9 @@ const Button: FC = ({
 
   return (
     <button style={style} className={classes} onClick={handleClick}>
-      {children}
+      {icon ? iconPosition === 'left' && icon : loading ? <Loading3QuartersOutlined spin /> : ''}
+      {<span className="button-text">{children}</span>}
+      {iconPosition === 'right' && icon}
     </button>
   );
 };

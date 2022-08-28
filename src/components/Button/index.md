@@ -9,12 +9,24 @@ nav:
 Demo:
 
 ```tsx
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from 'moon-ui';
+import { CaretRightOutlined } from '@ant-design/icons';
 
-export default () => (
-  <Button type="primary" onClick={() => console.log('test')}>
-    测试
-  </Button>
-);
+export default () => {
+  const [isLoading, setIsLoading] = useState(false);
+  return (
+    <Button
+      icon={<CaretRightOutlined />}
+      type="primary"
+      onClick={() => {
+        console.log('!isLoading', !isLoading);
+        setIsLoading(!isLoading);
+      }}
+      loading={isLoading}
+    >
+      测试
+    </Button>
+  );
+};
 ```

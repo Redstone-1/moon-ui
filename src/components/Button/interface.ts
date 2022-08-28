@@ -12,6 +12,7 @@ export interface ButtonProps {
   loading?: boolean;
   loadingFixedWidth?: boolean;
   icon?: ReactNode;
+  iconPosition?: 'left' | 'right';
   htmlType?: ButtonHTMLAttributes<any>;
   onClick?: (e: Event) => void;
 }
