@@ -4,15 +4,14 @@ export interface ButtonProps {
   style?: CSSProperties;
   className?: string | string[];
   children?: ReactNode;
-  type?: 'default' | 'primary' | 'secondary' | 'dashed' | 'text' | 'outline';
-  size?: 'mini' | 'small' | 'default' | 'large';
+  type?: 'primary' | 'secondary' | 'dashed' | 'outline';
+  size?: 'small' | 'medium' | 'large';
   shape?: 'circle' | 'round' | 'square';
-  status?: 'warning' | 'danger' | 'success' | 'default';
+  status?: 'warning' | 'danger' | 'success';
   disabled?: boolean;
   loading?: boolean;
-  loadingFixedWidth?: boolean;
   icon?: ReactNode;
   iconPosition?: 'left' | 'right';
-  htmlType?: ButtonHTMLAttributes<any>;
+  htmlType?: 'button' | 'submit' | 'reset';
   onClick?: (e: Event) => void;
 }
