@@ -13,6 +13,8 @@ import React, { useState } from 'react';
 import { Button } from 'moon-ui';
 import { CaretRightOutlined } from '@ant-design/icons';
 
+const ButtonGroup = Button.Group;
+
 export default () => {
   const [isLoading, setIsLoading] = useState(false);
   return (
@@ -288,6 +290,100 @@ export default () => {
       >
         测试
       </Button>
+
+      <ButtonGroup>
+        <Button type="primary">按钮组合</Button>
+        <Button type="primary">按钮组合</Button>
+        <Button type="primary">按钮组合</Button>
+        <Button type="primary">按钮组合</Button>
+      </ButtonGroup>
+      <ButtonGroup>
+        <Button type="secondary">按钮组合</Button>
+        <Button type="secondary">按钮组合</Button>
+        <Button type="secondary">按钮组合</Button>
+        <Button type="secondary">按钮组合</Button>
+      </ButtonGroup>
+      <ButtonGroup>
+        <Button type="dashed">按钮组合</Button>
+        <Button type="dashed">按钮组合</Button>
+        <Button type="dashed">按钮组合</Button>
+        <Button type="dashed">按钮组合</Button>
+      </ButtonGroup>
+
+      <ButtonGroup>
+        <Button type="primary" size="small" shape="round">
+          按钮组合
+        </Button>
+        <Button type="primary" size="small" shape="round">
+          按钮组合
+        </Button>
+        <Button type="primary" size="small" shape="round">
+          按钮组合
+        </Button>
+        <Button type="primary" size="small" shape="round">
+          按钮组合
+        </Button>
+      </ButtonGroup>
+
+      <ButtonGroup>
+        <Button type="secondary" shape="round">
+          按钮组合
+        </Button>
+        <Button type="secondary" shape="round">
+          按钮组合
+        </Button>
+        <Button type="secondary" shape="round">
+          按钮组合
+        </Button>
+        <Button type="secondary" shape="round">
+          按钮组合
+        </Button>
+      </ButtonGroup>
+
+      <ButtonGroup>
+        <Button type="outline" size="small" shape="round">
+          按钮组合
+        </Button>
+        <Button type="outline" size="small" shape="round">
+          按钮组合
+        </Button>
+        <Button type="outline" size="small" shape="round">
+          按钮组合
+        </Button>
+        <Button type="outline" size="small" shape="round">
+          按钮组合
+        </Button>
+      </ButtonGroup>
+
+      <ButtonGroup>
+        <Button type="outline" size="medium" shape="round">
+          按钮组合
+        </Button>
+        <Button type="outline" size="medium" shape="round">
+          按钮组合
+        </Button>
+        <Button type="outline" size="medium" shape="round">
+          按钮组合
+        </Button>
+        <Button type="outline" size="medium" shape="round">
+          按钮组合
+        </Button>
+      </ButtonGroup>
+
+      <ButtonGroup>
+        <Button type="outline" size="large" shape="round">
+          按钮组合
+        </Button>
+        <Button type="outline" size="large" shape="round">
+          按钮组合
+        </Button>
+        <Button type="outline" size="large" shape="round">
+          按钮组合
+        </Button>
+        <Button type="outline" size="large" shape="round">
+          按钮组合
+        </Button>
+      </ButtonGroup>
     </>
   );
 };

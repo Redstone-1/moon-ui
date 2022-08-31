@@ -2,6 +2,7 @@ import React, { FC, ReactElement } from 'react';
 import { Loading3QuartersOutlined } from '@ant-design/icons';
 import { ButtonProps } from './interface';
 import classNames from 'classnames';
+import Group from './group';
 import './index.less';
 
 const Button: FC = ({
@@ -49,3 +50,5 @@ const Button: FC = ({
 };
 
 export default Button;
+
+Button.Group = Group;

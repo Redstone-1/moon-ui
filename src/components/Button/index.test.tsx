@@ -7,7 +7,7 @@ describe('<Button />', () => {
   it('render Button with dumi', () => {
     const msg = 'dumi';
 
-    render(<Button title={msg} />);
+    // render(<Button title={msg} />);
     expect(screen.queryByText(msg)).toBeInTheDocument();
   });
 });

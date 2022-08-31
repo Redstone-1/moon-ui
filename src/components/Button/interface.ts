@@ -1,4 +1,4 @@
-import { CSSProperties, ButtonHTMLAttributes, ReactNode } from 'react';
+import { CSSProperties, ReactNode } from 'react';
 
 export interface ButtonProps {
   style?: CSSProperties;
@@ -14,4 +14,10 @@ export interface ButtonProps {
   iconPosition?: 'left' | 'right';
   htmlType?: 'button' | 'submit' | 'reset';
   onClick?: (e: Event) => void;
+}
+
+export interface ButtonGroupProps {
+  style?: CSSProperties;
+  className?: string | string[];
+  children?: ReactNode;
 }
