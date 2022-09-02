@@ -1,22 +1,45 @@
 ---
-nav:
-  title: Components
-  path: /components
+group:
+  title: 基础组件
+  path: /components/baseComponents
+  order: 0
+
+order: 1
 ---
 
-## Button
+# Button 按钮
 
-Demo:
+命令组件，触发一个即时操作。
+
+## 基本使用
+
+> 按钮分为主要按钮、次要按钮、虚线按钮和线形按钮四种。
 
 ```tsx
-import React, { useState } from 'react';
+import React, { FC, ReactElement, Fragment } from 'react';
+import { Button } from 'moon-ui';
+
+const ButtonDemo: FC = (): ReactElement => {
+  return (
+    <Fragment>
+      <Button type="primary">主要按钮</Button>
+      <Button type="secondary">次要按钮</Button>
+      <Button type="dashed">虚线按钮</Button>
+      <Button type="outline">线形按钮</Button>
+    </Fragment>
+  );
+};
+
+export default ButtonDemo;
+```
+
+<!-- import React, { Fragment, FC, ReactElement,  } from 'react';
 import { Button } from 'moon-ui';
 import { CaretRightOutlined } from '@ant-design/icons';
 
-const ButtonGroup = Button.Group;
+const ButtonGroup = Button.Group
 
 export default () => {
-  const [isLoading, setIsLoading] = useState(false);
   return (
     <>
       <Button
@@ -386,5 +409,6 @@ export default () => {
       </ButtonGroup>
     </>
   );
-};
-```
+}; -->
+
+<API></API>

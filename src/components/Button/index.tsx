@@ -5,7 +5,7 @@ import classNames from 'classnames';
 import Group from './group';
 import './index.less';
 
-const Button: FC = ({
+const Button: FC<ButtonProps> & { Group: typeof Group } = ({
   style,
   className,
   children,
@@ -19,7 +19,7 @@ const Button: FC = ({
   disabled = false,
   htmlType = 'button',
   onClick,
-}: ButtonProps): ReactElement => {
+}): ReactElement => {
   const classes = classNames(
     'button',
     `button-${type}`,
@@ -50,5 +50,4 @@ const Button: FC = ({
 };
 
 export default Button;
-
 Button.Group = Group;

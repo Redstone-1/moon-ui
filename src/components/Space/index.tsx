@@ -41,19 +41,27 @@ const Space: FC<SpaceProps> = ({
       const margin = calcMargin(size as SpaceSize);
       if (aroundWrap) {
         return {
-          marginTop: `${margin}px`,
-          marginRight: isLastOne ? `${margin}px` : '',
-          marginLeft: `${margin}px`,
-          marginBottom: `${margin}px`,
+          margin: `${margin}px`,
         };
       }
-      return { marginRight: `${margin}px` };
+      if (direction === 'horizontal') {
+        return { marginRight: `${margin}px` };
+      } else {
+        return {
+          marginBottom: isLastOne ? '' : `${margin}px`,
+        };
+      }
     }
 
     if (isArray(size)) {
       const size0 = size[0] || 0;
       const size1 = size[1] || 0;
       if (direction === 'horizontal') {
+        if (aroundWrap) {
+          return {
+            margin: `${size0}px ${size1}px `,
+          };
+        }
         return {
           marginRight: isLastOne ? '' : `${size0}px`,
           marginBottom: `${size[1]}px`,
