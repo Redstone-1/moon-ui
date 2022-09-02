@@ -8,4 +8,28 @@ export default defineConfig({
   outputPath: 'docs-dist',
   mode: 'site',
   // more config: https://d.umijs.org/config
+  alias: {
+    src: '/src',
+  },
+  menus: {
+    // 需要自定义侧边菜单的路径，没有配置的路径还是会使用自动生成的配置
+    '/components': [
+      {
+        title: '基础组件',
+        path: '/components/baseComponents',
+        children: [
+          // 菜单子项（可选）
+          'components/Button/index.md',
+        ],
+      },
+      {
+        title: '布局组件',
+        path: '/components/layoutComponents',
+        children: [
+          // 菜单子项（可选）
+          'components/Divider/index.md',
+        ],
+      },
+    ],
+  },
 });
