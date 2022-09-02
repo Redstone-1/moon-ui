@@ -28,6 +28,7 @@ export default defineConfig({
         children: [
           // 菜单子项（可选）
           'components/Divider/index.md',
+          'components/Space/index.md',
         ],
       },
     ],
