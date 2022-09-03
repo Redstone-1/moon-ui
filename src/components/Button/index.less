@@ -1,5 +1,5 @@
 @import '../../styles/default.less';
-@import '../../styles//theme/base.less';
+@import '../../styles/theme/base.less';
 
 .button {
   box-sizing: border-box;
@@ -14,10 +14,15 @@
   .button-text {
     padding: @spacing-none @spacing-4 @spacing-none @spacing-4;
     text-align: center;
+    vertical-align: baseline;
   }
   &:hover {
     cursor: pointer;
     opacity: @opacity-8;
+  }
+
+  .anticon:not(.anticon-spin) {
+    transform: translateY(1.5px);
   }
 }
 
@@ -68,8 +73,8 @@
 * shape
 */
 .button-small-circle {
-  width: 26px;
-  height: 26px;
+  width: 22px;
+  height: 22px;
   padding: 0;
   padding: 0;
   border-radius: @border-radius-circle;
@@ -80,8 +85,8 @@
 }
 
 .button-medium-circle {
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
   padding: 0;
   border-radius: @border-radius-circle;
   .button-text {
@@ -183,6 +188,7 @@
 .button-disabled {
   color: @color-gray-5;
   background-color: @color-gray-4;
+  border: none;
   &:hover,
   &:focus {
     cursor: not-allowed;
@@ -215,6 +221,11 @@
   }
   // ------------------------------------------------
 
+  .button-outline:not(:last-child) {
+    border-right: none;
+  }
+
+  // ------------------------------------------------
   .button-small-round {
     border-right: @border-1 @border-solid @color-white;
   }
@@ -267,14 +278,45 @@
   .button-outline.button-large-round:last-child {
     border-right: @border-1 @border-solid @color-primary-6;
   }
+
+  .button-dashed.button-small-round:last-child {
+    border-right: @border-1 @border-dashed @color-primary-6;
+  }
+  .button-dashed.button-medium-round:last-child {
+    border-right: @border-1 @border-dashed @color-primary-6;
+  }
+  .button-dashed.button-large-round:last-child {
+    border-right: @border-1 @border-dashed @color-primary-6;
+  }
   // ---------------------------
-  .button-outline-success.button-small-round:last-child {
-    border-right: @border-1 @border-solid @color-success-6;
-  }
-  .button-outline-danger.button-medium-round:last-child {
-    border-right: @border-1 @border-solid @color-danger-6;
-  }
-  .button-outline-warning.button-large-round:last-child {
-    border-right: @border-1 @border-solid @color-warning-6;
+  .button-border-right(dashed, success, small, @border-dashed, @color-success-6);
+  .button-border-right(dashed, success, medium, @border-dashed, @color-success-6);
+  .button-border-right(dashed, success, large, @border-dashed, @color-success-6);
+
+  .button-border-right(dashed, danger, small, @border-dashed, @color-danger-6);
+  .button-border-right(dashed, danger, medium, @border-dashed, @color-danger-6);
+  .button-border-right(dashed, danger, large, @border-dashed, @color-danger-6);
+
+  .button-border-right(dashed, warning, small, @border-dashed, @color-warning-6);
+  .button-border-right(dashed, warning, medium, @border-dashed, @color-warning-6);
+  .button-border-right(dashed, warning, large, @border-dashed, @color-warning-6);
+
+  .button-border-right(outline, success, small, @border-solid, @color-success-6);
+  .button-border-right(outline, success, medium, @border-solid, @color-success-6);
+  .button-border-right(outline, success, large, @border-solid, @color-success-6);
+
+  .button-border-right(outline, danger, small, @border-solid, @color-danger-6);
+  .button-border-right(outline, danger, medium, @border-solid, @color-danger-6);
+  .button-border-right(outline, danger, large, @border-solid, @color-danger-6);
+
+  .button-border-right(outline, warning, small, @border-solid, @color-warning-6);
+  .button-border-right(outline, warning, medium, @border-solid, @color-warning-6);
+  .button-border-right(outline, warning, large, @border-solid, @color-warning-6);
+}
+
+// 针对 button group 做一个 mixin
+.button-border-right(@type, @status, @size, @border-style, @color) {
+  .button-@{type}-@{status}.button-@{size}-round:last-child {
+    border-right: @border-1 @border-style @color;
   }
 }
