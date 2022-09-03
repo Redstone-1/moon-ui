@@ -31,6 +31,20 @@ export default defineConfig({
           'components/Space/index.md',
         ],
       },
+      {
+        title: '表单组件',
+        path: '/components/formComponents',
+        children: [
+          // 菜单子项（可选）
+        ],
+      },
+      {
+        title: '数据组件',
+        path: '/components/dataComponents',
+        children: [
+          // 菜单子项（可选）
+        ],
+      },
     ],
   },
 });

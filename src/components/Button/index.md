@@ -327,21 +327,21 @@ const ButtonDemo: FC = (): ReactElement => {
       </ButtonGroup>
 
       <ButtonGroup style={{ display: 'block', margin: '10px' }}>
-        <Button type="secondary">primary</Button>
-        <Button type="secondary">primary</Button>
-        <Button type="secondary">primary</Button>
+        <Button type="secondary">secondary</Button>
+        <Button type="secondary">secondary</Button>
+        <Button type="secondary">secondary</Button>
       </ButtonGroup>
 
       <ButtonGroup style={{ display: 'block', margin: '10px' }}>
-        <Button type="dashed">primary</Button>
-        <Button type="dashed">primary</Button>
-        <Button type="dashed">primary</Button>
+        <Button type="dashed">dashed</Button>
+        <Button type="dashed">dashed</Button>
+        <Button type="dashed">dashed</Button>
       </ButtonGroup>
 
       <ButtonGroup style={{ display: 'block', margin: '10px' }}>
-        <Button type="outline">primary</Button>
-        <Button type="outline">primary</Button>
-        <Button type="outline">primary</Button>
+        <Button type="outline">outline</Button>
+        <Button type="outline">outline</Button>
+        <Button type="outline">outline</Button>
       </ButtonGroup>
     </Fragment>
   );
@@ -363,49 +363,49 @@ const ButtonDemo: FC = (): ReactElement => {
     <Fragment>
       <ButtonGroup style={{ display: 'block', margin: '10px' }}>
         <Button shape="round" status="success">
-          primary
+          success
         </Button>
         <Button shape="round" status="danger">
-          primary
+          danger
         </Button>
         <Button shape="round" status="warning">
-          primary
+          warning
         </Button>
       </ButtonGroup>
 
       <ButtonGroup style={{ display: 'block', margin: '10px' }}>
         <Button shape="round" type="secondary" status="success">
-          primary
+          success
         </Button>
         <Button shape="round" type="secondary" status="danger">
-          primary
+          danger
         </Button>
         <Button shape="round" type="secondary" status="warning">
-          primary
+          warning
         </Button>
       </ButtonGroup>
 
       <ButtonGroup style={{ display: 'block', margin: '10px' }}>
         <Button shape="round" type="dashed" status="success">
-          primary
+          success
         </Button>
         <Button shape="round" type="dashed" status="danger">
-          primary
+          danger
         </Button>
         <Button shape="round" type="dashed" status="warning">
-          primary
+          warning
         </Button>
       </ButtonGroup>
 
       <ButtonGroup style={{ display: 'block', margin: '10px' }}>
         <Button shape="round" type="outline" status="success">
-          primary
+          success
         </Button>
         <Button shape="round" type="outline" status="danger">
-          primary
+          danger
         </Button>
         <Button shape="round" type="outline" status="warning">
-          primary
+          warning
         </Button>
       </ButtonGroup>
     </Fragment>
