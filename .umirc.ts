@@ -36,6 +36,7 @@ export default defineConfig({
         path: '/components/formComponents',
         children: [
           // 菜单子项（可选）
+          'components/Checkbox/index.md',
         ],
       },
       {
