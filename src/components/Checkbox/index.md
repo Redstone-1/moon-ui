@@ -32,6 +32,43 @@ const CheckboxDemo: FC = (): ReactElement => {
         >
           Checkbox
         </Checkbox>
+
+        <Checkbox
+          checked={true}
+          disabled
+          onChange={(checked, e) => {
+            setChecked(checked);
+          }}
+        >
+          Checkbox
+        </Checkbox>
+      </Space>
+    </Fragment>
+  );
+};
+
+export default CheckboxDemo;
+```
+
+## 按钮组
+
+> 一个按钮组。
+
+```tsx
+import React, { FC, ReactElement, Fragment, useState } from 'react';
+import { Space, Checkbox } from 'moon-ui';
+
+const CheckboxGroup = Checkbox.Group;
+
+const CheckboxDemo: FC = (): ReactElement => {
+  const options = [
+    { label: '选项一', value: '1' },
+    { label: '选项二', value: '2' },
+  ];
+  return (
+    <Fragment>
+      <Space size="small">
+        <CheckboxGroup options={options} value={['1']}></CheckboxGroup>
       </Space>
     </Fragment>
   );

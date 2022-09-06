@@ -103,6 +103,13 @@
       cursor: not-allowed;
     }
     input[type='checkbox'] {
+      border: 0;
+      &::before {
+        background-color: @color-gray-5;
+      }
+      &::after {
+        border-color: @color-gray-6;
+      }
       &:hover {
         cursor: not-allowed;
       }

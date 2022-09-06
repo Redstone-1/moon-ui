@@ -1,5 +1,7 @@
 import { CSSProperties, ReactNode } from 'react';
 
+export type StringNumber = string | number;
+
 export interface CheckboxProps {
   /** 内联样式 */
   style?: CSSProperties;
@@ -17,4 +19,15 @@ export interface CheckboxProps {
   value?: string | number | readonly string[] | undefined;
   /** 点击回调 */
   onChange?: (checked: boolean, e: Event) => void;
+}
+
+export interface CheckboxGroupProps {
+  style?: CSSProperties;
+  className?: string | string[];
+  disabled?: boolean;
+  direction?: 'horizontal' | 'vertical';
+  options?: { label: ReactNode; value: StringNumber; disabled?: boolean }[];
+  value?: StringNumber[];
+  onChange?: (value: StringNumber, e: Event) => void;
+  children?: ReactNode;
 }

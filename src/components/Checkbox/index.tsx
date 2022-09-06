@@ -1,7 +1,6 @@
 import React, {
   FC,
   ReactElement,
-  Fragment,
   useCallback,
   useState,
   useEffect,
@@ -9,10 +8,11 @@ import React, {
   ChangeEventHandler,
 } from 'react';
 import { CheckboxProps } from './interface';
+import Group from './group';
 import classNames from 'classnames';
 import './index.less';
 
-const Checkbox: FC<CheckboxProps> = ({
+const Checkbox: FC<CheckboxProps> & { Group: typeof Group } = ({
   style,
   className,
   checked,
@@ -46,13 +46,13 @@ const Checkbox: FC<CheckboxProps> = ({
     ['checked']: checked,
     ['half-checked']: halfChecked,
     ['disabled']: disabled,
+    className,
   });
 
   return (
     <label
       className={classes}
-      // onClick={}
-      style={{ cursor: disabled ? '' : 'pointer', ...style }}
+      style={{ cursor: disabled ? '' : 'pointer', ...style, margin: '0 4px 0 4px' }}
     >
       <span className="checkbox-wrapper">
         <input
@@ -70,3 +70,4 @@ const Checkbox: FC<CheckboxProps> = ({
 };
 
 export default Checkbox;
+Checkbox.Group = Group;
