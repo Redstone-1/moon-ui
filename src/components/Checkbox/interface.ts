@@ -1,6 +1,11 @@
 import { CSSProperties, ReactNode } from 'react';
 
 export type StringNumber = string | number;
+export interface OptionObject {
+  label: ReactNode;
+  value: StringNumber;
+  disabled?: boolean;
+}
 
 export interface CheckboxProps {
   /** 内联样式 */
@@ -12,13 +17,13 @@ export interface CheckboxProps {
   /** 是否选中 */
   checked?: boolean;
   /** 禁用 */
-  disabled?: boolean;
+  disabled: boolean;
   /** 半选 */
   halfChecked?: boolean;
   /** 复选框 value 属性 */
   value?: string | number | readonly string[] | undefined;
   /** 点击回调 */
-  onChange?: (checked: boolean, e: Event) => void;
+  onChange: (checked: boolean, e: Event) => void;
 }
 
 export interface CheckboxGroupProps {
@@ -26,8 +31,7 @@ export interface CheckboxGroupProps {
   className?: string | string[];
   disabled?: boolean;
   direction?: 'horizontal' | 'vertical';
-  options?: { label: ReactNode; value: StringNumber; disabled?: boolean }[];
-  value?: StringNumber[];
-  onChange?: (value: StringNumber, e: Event) => void;
-  children?: ReactNode;
+  options: OptionObject[];
+  values: StringNumber[];
+  onChange: (value: StringNumber, e: Event) => void;
 }

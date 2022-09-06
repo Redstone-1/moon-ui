@@ -35,6 +35,8 @@
   .checkbox-text {
     margin-left: 4px;
     color: @color-gray-8;
+    font-size: 14px;
+    vertical-align: 1px;
   }
 }
 
@@ -103,7 +105,6 @@
       cursor: not-allowed;
     }
     input[type='checkbox'] {
-      border: 0;
       &::before {
         background-color: @color-gray-5;
       }
@@ -121,4 +122,14 @@
       cursor: not-allowed;
     }
   }
+}
+
+.horizontal {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.vertical {
+  display: flex;
+  flex-direction: column;
 }

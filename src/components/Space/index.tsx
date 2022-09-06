@@ -1,6 +1,6 @@
 import React, { FC, ReactElement, Fragment } from 'react';
 import { SpaceProps, SpaceSize } from './interface';
-import { isArray, isNumber } from '../../utils';
+import { isArray, isNumber } from '../../utils/is';
 import classNames from 'classnames';
 import './index.less';
 

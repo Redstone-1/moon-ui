@@ -1,7 +1,8 @@
 import React, { FC, ReactElement, useCallback, useEffect, useState } from 'react';
+import { deepClone } from '../../utils/baseTools';
 import Checkbox from './index';
-import { CheckboxGroupProps, StringNumber } from './interface';
-import { isArray, isObject } from '../../utils';
+import { CheckboxGroupProps, StringNumber, OptionObject } from './interface';
+import { isArray } from '../../utils/is';
 import classNames from 'classnames';
 import './index.less';
 
@@ -9,55 +10,66 @@ const CheckboxGroup: FC<CheckboxGroupProps> = ({
   style,
   className,
   disabled,
-  direction,
+  direction = 'horizontal',
   options,
-  value,
+  values,
   onChange,
-  children,
 }): ReactElement => {
-  const [checkedValues, setCheckedValues] = useState([]);
+  const [checkedValues, setCheckedValues] = useState<StringNumber[]>([]);
+  const [newOptions, setNewOptions] = useState<OptionObject[]>([]);
 
   useEffect(() => {
-    if (value && isArray(value)) {
-      setCheckedValues(value as any);
+    if (values && isArray(values)) {
+      setCheckedValues(values);
     }
-  }, [value]);
+  }, [values]);
 
-  const classes = classNames(className);
+  useEffect(() => {
+    if (options && isArray(options)) {
+      if (disabled) {
+        const newOptions = deepClone(options) as [];
+        newOptions.forEach((option: OptionObject) => (option.disabled = true));
+        setNewOptions(newOptions);
+        return;
+      }
+      setNewOptions(options);
+    }
+  }, [options]);
+
+  const classes = classNames({ [`${direction}`]: direction }, className);
 
   const onCheckChange = useCallback(
     (item: { value: StringNumber | ConcatArray<never> }, checked: any, e: Event) => {
-      console.log('value>>>>>', value);
-      console.log('checkedValues>>>>>', checkedValues);
-      console.log('checked>>>>>', checked);
+      let newCheckedValues = [];
       if (checked) {
-        setCheckedValues(checkedValues.concat(item.value as any));
+        newCheckedValues = checkedValues.concat(item.value);
+        setCheckedValues(newCheckedValues);
       } else {
-        const newCheckedValues = checkedValues.filter((item) => item !== item?.value);
+        newCheckedValues = checkedValues.filter((value) => value !== item?.value);
         setCheckedValues(newCheckedValues);
       }
-      onChange && onChange(checkedValues as any, e);
+      onChange && onChange(newCheckedValues as any, e);
     },
-    [value, onChange],
+    [checkedValues, onChange],
   );
 
   return (
     <span className={classes} style={style}>
       {isArray(options)
-        ? options?.map((item) => {
+        ? newOptions?.map((item) => {
             return (
               <Checkbox
                 key={item?.value}
                 value={item?.value}
                 checked={checkedValues?.includes(item.value)}
-                disabled={item?.disabled}
+                disabled={item?.disabled as any}
                 onChange={(checked, e) => onCheckChange(item, checked, e)}
               >
                 {item?.label}
               </Checkbox>
             );
           })
-        : { children }}
+        : ''}
     </span>
   );
 };

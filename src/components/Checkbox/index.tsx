@@ -36,15 +36,15 @@ const Checkbox: FC<CheckboxProps> & { Group: typeof Group } = ({
       e.stopPropagation();
       if (typeof onChange === 'function') {
         onChange(e.target.checked, e);
-        setInnerChecked(!innerChecked);
       }
+      setInnerChecked(!innerChecked);
     },
-    [value, innerChecked, checked, onChange],
+    [innerChecked, onChange],
   );
 
   const classes = classNames('checkbox', {
     ['checked']: checked,
-    ['half-checked']: halfChecked,
+    ['half-checked']: checked === undefined && halfChecked,
     ['disabled']: disabled,
     className,
   });
