@@ -34,6 +34,29 @@ const DividerDemo: FC = (): ReactElement => {
 export default DividerDemo;
 ```
 
+## 设置尺寸
+
+> 使用 size 设置分割线左右距离。
+
+```tsx
+import React, { FC, ReactElement, Fragment } from 'react';
+import { Divider, Button } from 'moon-ui';
+
+const DividerDemo: FC = (): ReactElement => {
+  return (
+    <Fragment>
+      <Button status="success">按钮1</Button>
+      <Divider type="vertical" size={12}></Divider>
+      <Button status="danger">按钮2</Button>
+      <Divider type="vertical" size={12}></Divider>
+      <Button status="warning">按钮3</Button>
+    </Fragment>
+  );
+};
+
+export default DividerDemo;
+```
+
 ## 文本段落分割
 
 > 纵向上区分不同的文本块。

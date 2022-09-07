@@ -37,7 +37,6 @@ export default defineConfig({
         children: [
           // 菜单子项（可选）
           'components/Checkbox/index.md',
-          'components/Checkbox/group.md',
         ],
       },
       {

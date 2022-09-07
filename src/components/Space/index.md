@@ -145,7 +145,7 @@ export default SpaceDemo;
 
 ## 配合分割组件使用
 
-> 设置 split 属性并传入 Divider，使用 Divider 进行组件分割，且优先使用 Divider 间距，因此必须设置 size 属性为 [0]，否则间距会出现问题。
+> 设置 split 属性并传入 Divider，使用 Divider 进行组件分割。
 
 ```tsx
 import React, { FC, ReactElement, Fragment } from 'react';
@@ -154,7 +154,7 @@ import { Space, Button, Divider } from 'moon-ui';
 const SpaceDemo: FC = (): ReactElement => {
   return (
     <Fragment>
-      <Space size={[0]} split={<Divider />}>
+      <Space direction="vertical" split={<Divider type="horizontal" />}>
         <Button>按钮1</Button>
         <Button>按钮2</Button>
         <Button>按钮3</Button>

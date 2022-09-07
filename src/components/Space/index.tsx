@@ -4,11 +4,17 @@ import { isArray, isNumber } from '../../utils/is';
 import classNames from 'classnames';
 import './index.less';
 
+const flexCenter = {
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+};
+
 const Space: FC<SpaceProps> = ({
   style,
   className,
   direction = 'horizontal',
-  size = 'small',
+  size,
   aroundWrap = false,
   split,
   children,
@@ -31,7 +37,7 @@ const Space: FC<SpaceProps> = ({
       case 'large':
         return 24;
       default:
-        return 8;
+        return 0;
     }
   };
 
@@ -88,7 +94,7 @@ const Space: FC<SpaceProps> = ({
         return (
           <Fragment key={index}>
             {split && index > 0 && <div>{split}</div>}
-            <div style={getMarginStyle(index)}>{child}</div>
+            <div style={{ ...getMarginStyle(index), ...flexCenter }}>{child}</div>
           </Fragment>
         );
       })}
