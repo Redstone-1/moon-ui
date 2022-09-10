@@ -16,6 +16,10 @@ export const isNumber = (target: any) => {
   return OPT.call(target) === '[object Number]';
 };
 
+export const isString = (target: any) => {
+  return OPT.call(target) === '[object String]';
+};
+
 export const isAllUndefined = (...target: any) => {
   return [...target].every((item) => item === undefined);
 };

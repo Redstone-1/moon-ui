@@ -10,7 +10,7 @@ export interface SpaceProps {
   /** 间距大小 */
   size?: SpaceSize | SpaceSize[];
   /** 四周环绕间距，且换行 */
-  aroundWrap: boolean;
+  aroundWrap?: boolean;
   /** 分隔符，可与 Divider 搭配使用 */
   split?: ReactNode;
   /** 设置间距的元素 */

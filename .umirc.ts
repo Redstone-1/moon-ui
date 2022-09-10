@@ -36,12 +36,20 @@ export default defineConfig({
         path: '/components/formComponents',
         children: [
           // 菜单子项（可选）
+          'components/Radio/index.md',
           'components/Checkbox/index.md',
         ],
       },
       {
         title: '数据组件',
         path: '/components/dataComponents',
+        children: [
+          // 菜单子项（可选）
+        ],
+      },
+      {
+        title: '反馈组件',
+        path: '/components/feedbackComponents',
         children: [
           // 菜单子项（可选）
         ],

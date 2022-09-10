@@ -1,4 +1,5 @@
 import { CSSProperties, ReactNode } from 'react';
+import { ButtonProps } from '../Button/interface';
 
 export type StringNumber = string | number;
 export interface OptionObject {
@@ -7,38 +8,44 @@ export interface OptionObject {
   disabled?: boolean;
 }
 
-export interface CheckboxProps {
+export interface RadioProps {
   /** 内联样式 */
   style?: CSSProperties;
   /** 类名 */
   className?: string;
-  /** 复选框文本内容 */
+  /** 单选框文本内容 */
   children?: ReactNode;
   /** 是否选中 */
   checked: boolean;
   /** 禁用 */
   disabled?: boolean;
-  /** 半选 */
-  halfChecked?: boolean;
-  /** 复选框 value 属性 */
+  /** 单选框 value 属性 */
   value?: string | number | readonly string[] | undefined;
   /** 点击回调 */
   onChange: (checked: boolean, e: Event) => void;
 }
 
-export interface CheckboxGroupProps {
-  /** Group 内联样式 */
+export interface RadioGroupProps {
+  /** Group  内联样式 */
   style?: CSSProperties;
-  /** Group 类名 */
+  /** Group  类名 */
   className?: string | string[];
-  /** Group 是否禁用 */
+  /** Group  按钮类型 */
+  type: 'button';
+  /** Group  按钮大小 */
+  buttonSize: 'small' | 'medium' | 'large';
+  /** Group  按钮颜色，接受16进制颜色 */
+  buttonBgColor: string;
+  /** Group  按钮 active 颜色，接受16进制颜色 */
+  buttonActiveColor: string;
+  /** Group  是否禁用 */
   disabled?: boolean;
-  /** Group 复选框横纵布局 */
+  /** Group  横纵布局 */
   direction?: 'horizontal' | 'vertical';
-  /** Group 选项配置 */
+  /** Group  选项配置 */
   options: { label: ReactNode; value: string | number; disabled?: boolean }[];
-  /** Group 选中的值 */
-  values: string[] | number[];
-  /** Group 点击回调 */
+  /** Group  选中的值 */
+  value: string | number;
+  /** Group  点击回调 */
   onChange: (value: string | number, e: Event) => void;
 }

@@ -9,7 +9,9 @@ const Divider: FC<DividerProps> = ({
   children,
   type = 'vertical',
   orientation = 'center',
-  size = 10,
+  margin = 10,
+  size = 1,
+  color,
 }): ReactElement => {
   const classes = classNames(
     `divider-${type}`,
@@ -24,10 +26,12 @@ const Divider: FC<DividerProps> = ({
     <div
       className={classes}
       style={{
-        marginLeft: type === 'vertical' ? `${size}px` : '',
-        marginTop: type === 'horizontal' ? `${size}px` : '',
-        marginBottom: type === 'horizontal' ? `${size}px` : '',
-        marginRight: type === 'vertical' ? `${size}px` : '',
+        marginLeft: type === 'vertical' ? `${margin}px` : '',
+        marginTop: type === 'horizontal' ? `${margin}px` : '',
+        marginBottom: type === 'horizontal' ? `${margin}px` : '',
+        marginRight: type === 'vertical' ? `${margin}px` : '',
+        borderWidth: `${size}`,
+        borderColor: `${color}`,
         ...style,
       }}
     >

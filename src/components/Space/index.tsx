@@ -93,7 +93,7 @@ const Space: FC<SpaceProps> = ({
       {childrenList.map((child, index) => {
         return (
           <Fragment key={index}>
-            {split && index > 0 && <div>{split}</div>}
+            {split && index > 0 && <div style={{ ...flexCenter }}>{split}</div>}
             <div style={{ ...getMarginStyle(index), ...flexCenter }}>{child}</div>
           </Fragment>
         );

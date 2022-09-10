@@ -154,7 +154,7 @@ import { Space, Button, Divider } from 'moon-ui';
 const SpaceDemo: FC = (): ReactElement => {
   return (
     <Fragment>
-      <Space direction="vertical" split={<Divider type="horizontal" />}>
+      <Space split={<Divider type="vertical" />}>
         <Button>按钮1</Button>
         <Button>按钮2</Button>
         <Button>按钮3</Button>
