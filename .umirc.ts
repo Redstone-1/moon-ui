@@ -17,42 +17,31 @@ export default defineConfig({
       {
         title: '基础组件',
         path: '/components/baseComponents',
-        children: [
-          // 菜单子项（可选）
-          'components/Button/index.md',
-        ],
+        children: ['components/Button/index.md'],
       },
       {
         title: '布局组件',
         path: '/components/layoutComponents',
-        children: [
-          // 菜单子项（可选）
-          'components/Divider/index.md',
-          'components/Space/index.md',
-        ],
+        children: ['components/Divider/index.md', 'components/Space/index.md'],
       },
       {
         title: '表单组件',
         path: '/components/formComponents',
         children: [
-          // 菜单子项（可选）
           'components/Radio/index.md',
           'components/Checkbox/index.md',
+          'components/Switch/index.md',
         ],
       },
       {
         title: '数据组件',
         path: '/components/dataComponents',
-        children: [
-          // 菜单子项（可选）
-        ],
+        children: [],
       },
       {
         title: '反馈组件',
         path: '/components/feedbackComponents',
-        children: [
-          // 菜单子项（可选）
-        ],
+        children: ['components/Message/index.md'],
       },
     ],
   },
