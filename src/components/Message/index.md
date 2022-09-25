@@ -13,25 +13,185 @@ order: 4
 
 ## 基本使用
 
->
+> 直接使用函数加载提示，简洁高效。
 
 ```tsx
 import React, { FC, ReactElement, Fragment, useState } from 'react';
 import { Space, Button, Message } from 'moon-ui';
 
 const MessageDemo: FC = (): ReactElement => {
-  const showMessage = () => {
-    // Message.success({
-    //   title: '标题',
-    //   content: '内容',
-    // })
-  };
   return (
     <Fragment>
-      <Button onClick={showMessage}></Button>
+      <Space size="small">
+        <Button status="success" onClick={() => Message.success({ content: '成功提示' })}>
+          成功提示
+        </Button>
+      </Space>
     </Fragment>
   );
 };
 
 export default MessageDemo;
 ```
+
+## 提示类型
+
+> 不同的提示类型，使用不同的函数触发。分别是 success | warning | danger | info | loading。
+
+```tsx
+import React, { FC, ReactElement, Fragment, useState } from 'react';
+import { Space, Button, Message } from 'moon-ui';
+
+const MessageDemo: FC = (): ReactElement => {
+  return (
+    <Fragment>
+      <Space size="small">
+        <Button status="success" onClick={() => Message.success({ content: '成功提示' })}>
+          成功提示
+        </Button>
+        <Button status="warning" onClick={() => Message.warning({ content: '警告提示' })}>
+          警告提示
+        </Button>
+        <Button status="danger" onClick={() => Message.danger({ content: '危险提示' })}>
+          危险提示
+        </Button>
+        <Button type="secondary" onClick={() => Message.info({ content: '信息提示' })}>
+          信息提示
+        </Button>
+        <Button onClick={() => Message.loading({ content: '加载中提示' })}>加载中提示</Button>
+      </Space>
+    </Fragment>
+  );
+};
+
+export default MessageDemo;
+```
+
+## 设置尺寸
+
+> 给提示设置不同尺寸，size = small | medium | large。
+
+```tsx
+import React, { FC, ReactElement, Fragment, useState } from 'react';
+import { Space, Button, Message } from 'moon-ui';
+
+const MessageDemo: FC = (): ReactElement => {
+  return (
+    <Fragment>
+      <Space size="small">
+        <Button
+          status="success"
+          onClick={() => Message.success({ content: 'small', size: 'small' })}
+        >
+          small
+        </Button>
+        <Button
+          status="success"
+          onClick={() => Message.success({ content: 'medium', size: 'medium' })}
+        >
+          medium
+        </Button>
+        <Button
+          status="success"
+          onClick={() => Message.success({ content: 'large', size: 'large' })}
+        >
+          large
+        </Button>
+      </Space>
+    </Fragment>
+  );
+};
+
+export default MessageDemo;
+```
+
+## 延迟触发
+
+> 给提示设置 delay 属性可以延迟触发。
+
+```tsx
+import React, { FC, ReactElement, Fragment, useState } from 'react';
+import { Space, Button, Message } from 'moon-ui';
+
+const MessageDemo: FC = (): ReactElement => {
+  return (
+    <Fragment>
+      <Space size="small">
+        <Button
+          status="warning"
+          onClick={() => Message.warning({ content: '延迟2秒', delay: 2000 })}
+        >
+          延迟2秒
+        </Button>
+      </Space>
+    </Fragment>
+  );
+};
+
+export default MessageDemo;
+```
+
+## 持续时间
+
+> 设置 duration 可以让消息持续任意时长。
+
+```tsx
+import React, { FC, ReactElement, Fragment, useState } from 'react';
+import { Space, Button, Message } from 'moon-ui';
+
+const MessageDemo: FC = (): ReactElement => {
+  return (
+    <Fragment>
+      <Space size="small">
+        <Button
+          status="danger"
+          onClick={() => Message.danger({ content: '持续5秒', duration: 5000 })}
+        >
+          持续5秒
+        </Button>
+      </Space>
+    </Fragment>
+  );
+};
+
+export default MessageDemo;
+```
+
+## 设置图标
+
+> 控制图标显隐或自定义图标。
+
+```tsx
+import React, { FC, ReactElement, Fragment, useState } from 'react';
+import { Space, Button, Message } from 'moon-ui';
+import { WifiOutlined } from '@ant-design/icons';
+
+const MessageDemo: FC = (): ReactElement => {
+  return (
+    <Fragment>
+      <Space size="small">
+        <Button
+          status="success"
+          onClick={() =>
+            Message.success({ content: '隐藏图标', position: 'left-top', showIcon: false })
+          }
+        >
+          隐藏图标
+        </Button>
+        <Button
+          status="success"
+          onClick={() =>
+            Message.success({ content: '自定义图标', position: 'left-top', icon: <WifiOutlined /> })
+          }
+        >
+          自定义图标
+        </Button>
+      </Space>
+    </Fragment>
+  );
+};
+
+export default MessageDemo;
+```
+
+<API></API>
