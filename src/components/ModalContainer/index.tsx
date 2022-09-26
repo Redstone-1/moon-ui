@@ -45,7 +45,21 @@ class ModalContainer extends React.Component {
       newNodeList.push(newNode);
       let newActiveIDList = [...this.state.activeIDList, id];
 
-      newNode._delayTimer = setTimeout(() => {
+      if (config.delay > 0) {
+        newNode._delayTimer = setTimeout(() => {
+          this.setState(
+            {
+              activeIDList: [id],
+              nodeList: [newNode],
+            },
+            () => {
+              newNode._durationTimer = setTimeout(() => {
+                removeChild(newNode);
+              }, config.duration);
+            },
+          );
+        }, config.delay);
+      } else {
         this.setState(
           {
             activeIDList: newActiveIDList,
@@ -57,7 +71,7 @@ class ModalContainer extends React.Component {
             }, config.duration);
           },
         );
-      }, config.delay);
+      }
     };
     const removeChild = async (newNode: nodeProps) => {
       clearTimeout(newNode._delayTimer);

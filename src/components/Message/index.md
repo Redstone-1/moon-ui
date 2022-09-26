@@ -107,7 +107,7 @@ export default MessageDemo;
 
 ## 延迟触发
 
-> 给提示设置 delay 属性可以延迟触发。
+> 给提示设置 delay 属性可以延迟触发。延迟触发的消息同时间只能存在一个节点，在持续时间内，多次触发也只生成一个。当然，你可以使用 setInterval 循环触发。
 
 ```tsx
 import React, { FC, ReactElement, Fragment, useState } from 'react';
