@@ -17,7 +17,7 @@ export default defineConfig({
       {
         title: '基础组件',
         path: '/components/baseComponents',
-        children: ['components/Button/index.md'],
+        children: ['components/Button/index.md', 'components/Icon/index.md'],
       },
       {
         title: '布局组件',

@@ -1,0 +1,36 @@
+@import '../../styles/default.less';
+@import '../../styles/theme/base.less';
+
+.icon-box {
+  width: 120px;
+  height: 80px;
+  padding: 8px 10px 0 10px;
+  color: @color-gray-7;
+  border: 1px solid @color-gray-3;
+  border-radius: 4px;
+  &:hover {
+    color: #fff;
+    background-color: @color-primary-6;
+    cursor: pointer;
+    .icon {
+      font-size: 50px;
+    }
+    .icon-text {
+      display: none;
+    }
+  }
+  .icon {
+    margin: 0;
+    font-size: 36px;
+    text-align: center;
+    transition: all 0.5s @transition-timing-function-overshoot;
+  }
+  .icon-text {
+    margin: 0;
+    color: @color-gray-7;
+    font-size: 12px;
+    white-space: pre-wrap;
+    text-align: center;
+    word-break: break-all;
+  }
+}

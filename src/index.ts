@@ -1,4 +1,5 @@
 export { default as Button } from './components/Button';
+export { default as Icon } from './components/Icon';
 export { default as Divider } from './components/Divider';
 export { default as Space } from './components/Space';
 export { default as Checkbox } from './components/Checkbox';
