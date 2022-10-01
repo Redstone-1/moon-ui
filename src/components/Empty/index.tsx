@@ -31,11 +31,11 @@ const Empty: FC<EmptyProps> = ({
       {imgSrc ? (
         <img alt="Empty 图片" src={imgSrc} />
       ) : (
-        <p style={{ margin: '10px 0' }} className="empty-icon">
+        <p style={{ margin: '5px 0' }} className="empty-icon">
           {icon ? icon : defaultIcon()}
         </p>
       )}
-      <p style={{ margin: '10px 0' }} className="empty-description">
+      <p style={{ margin: '5px 0' }} className="empty-description">
         {description ? description : '暂无数据'}
       </p>
     </div>
