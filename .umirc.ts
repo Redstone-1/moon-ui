@@ -36,7 +36,7 @@ export default defineConfig({
       {
         title: '数据组件',
         path: '/components/dataComponents',
-        children: [],
+        children: ['/components/Empty/index.md'],
       },
       {
         title: '反馈组件',
