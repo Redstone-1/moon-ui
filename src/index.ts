@@ -7,3 +7,4 @@ export { default as Radio } from './components/Radio';
 export { default as Message } from './components/Message';
 export { default as Switch } from './components/Switch';
 export { default as Empty } from './components/Empty';
+export { default as Spin } from './components/Spin';
