@@ -8,7 +8,13 @@ import './index.less';
  * @param param
  * @returns ReactElement
  */
-const Icon: FC<IconProps> = ({ style, className, spin, rotate, twoToneColor }): ReactElement => {
+const Icon: FC<IconProps> & { IconBox: any } = ({
+  style,
+  className,
+  spin,
+  rotate,
+  twoToneColor,
+}): ReactElement => {
   return <div></div>;
 };
 
