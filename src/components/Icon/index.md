@@ -72,8 +72,8 @@ const IconDemo: FC = (): ReactElement => {
   return (
     <Fragment>
       <Space size={[4, 4]} aroundWrap>
-        {iconList.map((item) => (
-          <IconBox icon={item} />
+        {iconList.map((item, index) => (
+          <IconBox key={index} icon={item} />
         ))}
       </Space>
     </Fragment>
@@ -152,8 +152,8 @@ const IconDemo: FC = (): ReactElement => {
   return (
     <Fragment>
       <Space size={[4, 4]} aroundWrap>
-        {iconList.map((item) => (
-          <IconBox icon={item} />
+        {iconList.map((item, index) => (
+          <IconBox key={index} icon={item} />
         ))}
       </Space>
     </Fragment>
@@ -204,8 +204,8 @@ const IconDemo: FC = (): ReactElement => {
   return (
     <Fragment>
       <Space size={[4, 4]} aroundWrap>
-        {iconList.map((item) => (
-          <IconBox icon={item} />
+        {iconList.map((item, index) => (
+          <IconBox key={index} icon={item} />
         ))}
       </Space>
     </Fragment>
@@ -256,8 +256,8 @@ const IconDemo: FC = (): ReactElement => {
   return (
     <Fragment>
       <Space size={[4, 4]} aroundWrap>
-        {iconList.map((item) => (
-          <IconBox icon={item} />
+        {iconList.map((item, index) => (
+          <IconBox key={index} icon={item} />
         ))}
       </Space>
     </Fragment>
@@ -316,8 +316,8 @@ const IconDemo: FC = (): ReactElement => {
   return (
     <Fragment>
       <Space size={[4, 4]} aroundWrap>
-        {iconList.map((item) => (
-          <IconBox icon={item} />
+        {iconList.map((item, index) => (
+          <IconBox key={index} icon={item} />
         ))}
       </Space>
     </Fragment>
@@ -382,8 +382,8 @@ const IconDemo: FC = (): ReactElement => {
   return (
     <Fragment>
       <Space size={[4, 4]} aroundWrap>
-        {iconList.map((item) => (
-          <IconBox icon={item} />
+        {iconList.map((item, index) => (
+          <IconBox key={index} icon={item} />
         ))}
       </Space>
     </Fragment>
@@ -422,8 +422,8 @@ const IconDemo: FC = (): ReactElement => {
   return (
     <Fragment>
       <Space size={[4, 4]} aroundWrap>
-        {iconList.map((item) => (
-          <IconBox icon={item} />
+        {iconList.map((item, index) => (
+          <IconBox key={index} icon={item} />
         ))}
       </Space>
     </Fragment>
@@ -448,8 +448,8 @@ const IconDemo: FC = (): ReactElement => {
   return (
     <Fragment>
       <Space size={[4, 4]} aroundWrap>
-        {iconList.map((item) => (
-          <IconBox icon={item} />
+        {iconList.map((item, index) => (
+          <IconBox key={index} icon={item} />
         ))}
       </Space>
     </Fragment>
@@ -486,8 +486,8 @@ const IconDemo: FC = (): ReactElement => {
   return (
     <Fragment>
       <Space size={[4, 4]} aroundWrap>
-        {iconList.map((item) => (
-          <IconBox icon={item} />
+        {iconList.map((item, index) => (
+          <IconBox key={index} icon={item} />
         ))}
       </Space>
     </Fragment>
@@ -532,8 +532,8 @@ const IconDemo: FC = (): ReactElement => {
   return (
     <Fragment>
       <Space size={[4, 4]} aroundWrap>
-        {iconList.map((item) => (
-          <IconBox icon={item} />
+        {iconList.map((item, index) => (
+          <IconBox key={index} icon={item} />
         ))}
       </Space>
     </Fragment>
@@ -572,8 +572,8 @@ const IconDemo: FC = (): ReactElement => {
   return (
     <Fragment>
       <Space size={[4, 4]} aroundWrap>
-        {iconList.map((item) => (
-          <IconBox icon={item} />
+        {iconList.map((item, index) => (
+          <IconBox key={index} icon={item} />
         ))}
       </Space>
     </Fragment>
@@ -598,8 +598,8 @@ const IconDemo: FC = (): ReactElement => {
   return (
     <Fragment>
       <Space size={[4, 4]} aroundWrap>
-        {iconList.map((item) => (
-          <IconBox icon={item} />
+        {iconList.map((item, index) => (
+          <IconBox key={index} icon={item} />
         ))}
       </Space>
     </Fragment>

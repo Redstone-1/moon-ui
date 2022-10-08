@@ -143,7 +143,7 @@ const SwitchDemo: FC = (): ReactElement => {
   return (
     <Fragment>
       <Space size="small">
-        <Switch size="medium" activeColor="orange" inActiveColor="skyblue" ballColor="#ff6768" />
+        <Switch size="medium" activeColor="orange" inActiveColor="skyblue" ballColor="#7ebc59" />
         <Switch
           value={checked}
           size="medium"
