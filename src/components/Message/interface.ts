@@ -15,6 +15,8 @@ export interface OptionsProps {
   delay?: number;
   /** 提示持续时间 */
   duration?: number;
+  /** 提示位置 */
+  position?: 'left' | 'center' | 'right';
   /** 自定义图标 */
   icon?: ReactNode;
   /** 是否显示图标 */

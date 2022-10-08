@@ -2,21 +2,20 @@
 @import '../../styles//theme/base.less';
 
 .message {
-  display: inline-block;
-  margin-left: 50%;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
   padding: 6px 12px;
-  color: #fff;
   border-radius: 2px;
-  transform: translateX(-50%);
   &-icon {
     margin-right: 5px;
   }
 }
 
-.message-type(@type, @bgColor, @color) {
+.message-type(@type, @color) {
   .message-@{type} {
     color: @color;
-    background-color: @bgColor;
+    background-color: @color-gray-2;
   }
 }
 
@@ -27,11 +26,11 @@
   }
 }
 
-.message-type(success, @color-success-6, #fff);
-.message-type(warning, @color-warning-6, #fff);
-.message-type(danger, @color-danger-6, #fff);
-.message-type(info, @color-gray-3, @color-gray-9);
-.message-type(loading, @color-primary-6, #fff);
+.message-type(success, @color-success-6);
+.message-type(warning, @color-warning-6);
+.message-type(danger, @color-danger-6);
+.message-type(info, @color-gray-9);
+.message-type(loading, @color-primary-6);
 
 .message-size(small, 16px, 12px);
 .message-size(medium, 24px, 16px);

@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import {
   CheckCircleOutlined,
   WarningOutlined,
@@ -7,9 +8,25 @@ import {
   Loading3QuartersOutlined,
 } from '@ant-design/icons';
 import classNames from 'classnames';
-import { modalControl } from '../ModalContainer';
+import NoticeContainer, { NoticeController } from '../_Notice';
 import { OptionsProps } from './interface';
 import './index.less';
+
+/**
+ * 挂载 Notice 容器
+ */
+export function initNoticeContainer() {
+  let ele = document.getElementById('moon-ui-notice-contain');
+  if (!ele) {
+    // 如果不存在容器，则进行创建
+    let sourceNoticeContainer = document.createElement('div');
+    sourceNoticeContainer.id = 'moon-ui-notice-contain';
+    document.body.append(sourceNoticeContainer);
+    ele = document.getElementById('moon-ui-notice-contain');
+    // 通过 ReactDOM 将容器挂载在真实 dom 上
+    ReactDOM.render(<NoticeContainer />, ele);
+  }
+}
 
 const defaultOptions = {
   icon: <CheckCircleOutlined />,
@@ -20,6 +37,7 @@ const defaultOptions = {
   delay: 0,
   style: {},
   className: '',
+  position: 'left',
 };
 
 function Message<OptionsProps>({
@@ -30,7 +48,13 @@ function Message<OptionsProps>({
   content = '提示',
   showIcon = true,
   icon = <CheckCircleOutlined />,
+  delay = 0,
+  duration = 2000,
+  position = 'center',
 }) {
+  console.log('delay>>>>>', delay);
+  console.log('duration>>>>>', duration);
+  console.log('position>>>>>', position);
   const classes = classNames(
     'message',
     {
@@ -55,6 +79,7 @@ function Message<OptionsProps>({
 }
 
 function success(options: OptionsProps = defaultOptions as any) {
+  initNoticeContainer();
   const {
     icon,
     size = 'small',
@@ -64,8 +89,9 @@ function success(options: OptionsProps = defaultOptions as any) {
     delay = 0,
     style,
     className,
+    position = 'center',
   } = options;
-  modalControl.addChild(
+  NoticeController.addChild(
     <Message
       style={style}
       className={className as any}
@@ -75,11 +101,12 @@ function success(options: OptionsProps = defaultOptions as any) {
       showIcon={showIcon}
       icon={icon as any}
     />,
-    { delay, duration },
+    { delay, duration, position },
   );
 }
 
 function warning(options: OptionsProps = defaultOptions as any) {
+  initNoticeContainer();
   const {
     icon = <WarningOutlined />,
     size = 'small',
@@ -89,8 +116,9 @@ function warning(options: OptionsProps = defaultOptions as any) {
     delay = 0,
     style,
     className,
+    position = 'center',
   } = options;
-  modalControl.addChild(
+  NoticeController.addChild(
     <Message
       style={style}
       className={className as any}
@@ -100,11 +128,12 @@ function warning(options: OptionsProps = defaultOptions as any) {
       showIcon={showIcon}
       icon={icon as any}
     />,
-    { delay, duration },
+    { delay, duration, position },
   );
 }
 
 function danger(options: OptionsProps = defaultOptions as any) {
+  initNoticeContainer();
   const {
     icon = <ExclamationCircleOutlined />,
     size = 'small',
@@ -114,8 +143,9 @@ function danger(options: OptionsProps = defaultOptions as any) {
     delay = 0,
     style,
     className,
+    position = 'center',
   } = options;
-  modalControl.addChild(
+  NoticeController.addChild(
     <Message
       style={style}
       className={className as any}
@@ -125,11 +155,12 @@ function danger(options: OptionsProps = defaultOptions as any) {
       showIcon={showIcon}
       icon={icon as any}
     />,
-    { delay, duration },
+    { delay, duration, position },
   );
 }
 
 function info(options: OptionsProps = defaultOptions as any) {
+  initNoticeContainer();
   const {
     icon = <InfoCircleOutlined />,
     size = 'small',
@@ -139,8 +170,9 @@ function info(options: OptionsProps = defaultOptions as any) {
     delay = 0,
     style,
     className,
+    position = 'center',
   } = options;
-  modalControl.addChild(
+  NoticeController.addChild(
     <Message
       style={style}
       className={className as any}
@@ -150,11 +182,12 @@ function info(options: OptionsProps = defaultOptions as any) {
       showIcon={showIcon}
       icon={icon as any}
     />,
-    { delay, duration },
+    { delay, duration, position },
   );
 }
 
 function loading(options: OptionsProps = defaultOptions as any) {
+  initNoticeContainer();
   const {
     icon = <Loading3QuartersOutlined spin />,
     size = 'small',
@@ -164,8 +197,9 @@ function loading(options: OptionsProps = defaultOptions as any) {
     delay = 0,
     style,
     className,
+    position = 'center',
   } = options;
-  modalControl.addChild(
+  NoticeController.addChild(
     <Message
       style={style}
       className={className as any}
@@ -175,7 +209,7 @@ function loading(options: OptionsProps = defaultOptions as any) {
       showIcon={showIcon}
       icon={icon as any}
     />,
-    { delay, duration },
+    { delay, duration, position },
   );
 }
 
