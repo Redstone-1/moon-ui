@@ -11,6 +11,12 @@ export default defineConfig({
   alias: {
     src: '/src',
   },
+  navs: [
+    {
+      title: '组件',
+      path: '/components',
+    },
+  ],
   menus: {
     // 需要自定义侧边菜单的路径，没有配置的路径还是会使用自动生成的配置
     '/components': [
