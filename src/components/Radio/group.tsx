@@ -14,7 +14,7 @@ const RadioGroup: FC<RadioGroupProps> = ({
   type,
   buttonSize = 'small',
   buttonBgColor = '#fff',
-  buttonActiveColor = '#e5e6eb',
+  buttonActiveColor = '#f2f3f5',
   disabled,
   direction = 'horizontal',
   options,
