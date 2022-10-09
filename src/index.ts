@@ -9,3 +9,4 @@ export { default as Switch } from './components/Switch';
 export { default as Empty } from './components/Empty';
 export { default as Spin } from './components/Spin';
 export { default as Link } from './components/Link';
+export { default as Result } from './components/Result';

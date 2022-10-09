@@ -45,7 +45,11 @@ export default defineConfig({
       {
         title: '反馈组件',
         path: '/components/feedbackComponents',
-        children: ['components/Message/index.md', 'components/Spin/index.md'],
+        children: [
+          'components/Message/index.md',
+          'components/Spin/index.md',
+          'components/Result/index.md',
+        ],
       },
       {
         title: '导航组件',
