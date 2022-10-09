@@ -1,0 +1,52 @@
+@import '../../styles/default.less';
+@import '../../styles/theme/base.less';
+
+.moon-ui-link {
+  .without-hover-color();
+  &:hover {
+    background-color: @color-gray-2;
+  }
+}
+
+.without-hover-color {
+  display: inline-block;
+  padding: 1px 6px 3px 6px;
+  border-radius: 2px;
+  &:hover {
+    cursor: pointer;
+  }
+  .link-icon {
+    margin-right: 5px;
+    color: @color-primary-6;
+    font-size: 14px;
+  }
+  .link-a {
+    color: @color-primary-6;
+    text-decoration: none;
+  }
+}
+
+.error {
+  .link-a {
+    color: @color-danger-6;
+  }
+}
+
+.success {
+  .link-a {
+    color: @color-success-6;
+  }
+}
+
+.warning {
+  .link-a {
+    color: @color-warning-6;
+  }
+}
+
+.disabled {
+  .link-a {
+    color: @color-gray-6;
+    cursor: not-allowed;
+  }
+}
