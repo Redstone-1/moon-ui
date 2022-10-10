@@ -196,4 +196,4 @@ export default CheckboxDemo;
 
 <API></API>
 
-<API src='/group.tsx'></API>
+<API src='./group.tsx'></API>
