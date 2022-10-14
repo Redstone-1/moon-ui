@@ -1,12 +1,3 @@
----
-group:
-  title: 布局组件
-  path: /components/layoutComponents
-  order: 0
-
-order: 2
----
-
 # Divider 分割线
 
 布局组件，用于分割组件，可进行纵向、横向分割，并配以文字显示。

@@ -1,12 +1,3 @@
----
-group:
-  title: 表单组件
-  path: /components/formComponents
-  order: 3
-
-order: 3
----
-
 # Switch 开关
 
 互斥性的操作控件，用户可打开或关闭某个功能。

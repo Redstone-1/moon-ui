@@ -1,12 +1,3 @@
----
-group:
-  title: 布局组件
-  path: /components/layoutComponents
-  order: 1
-
-order: 2
----
-
 # Space 间距
 
 布局组件，用于给组件增加间距。

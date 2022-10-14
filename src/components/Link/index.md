@@ -1,12 +1,3 @@
----
-group:
-  title: 基础组件
-  path: /components/baseComponents
-  order: 1
-
-order: 1
----
-
 # Link 链接
 
 基于 a 标签的一个简单链接组件。

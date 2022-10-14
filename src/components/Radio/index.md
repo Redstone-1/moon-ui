@@ -1,12 +1,3 @@
----
-group:
-  title: 表单组件
-  path: /components/formComponents
-  order: 2
-
-order: 3
----
-
 # Radio 单选框
 
 表单输入选项，单选，在多个选择项中选择符合的一项。同样的，Radio 仅支持受控模式。

@@ -1,12 +1,3 @@
----
-group:
-  title: 反馈组件
-  path: /components/feedbackComponents
-  order: 1
-
-order: 4
----
-
 # Message 全局提示
 
 由用户的操作触发的轻量级全局反馈。

@@ -1,12 +1,3 @@
----
-group:
-  title: 基础组件
-  path: /components/baseComponents
-  order: 0
-
-order: 1
----
-
 # Button 按钮
 
 命令组件，触发一个即时操作。

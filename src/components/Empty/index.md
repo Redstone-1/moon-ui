@@ -1,12 +1,3 @@
----
-group:
-  title: 数据组件
-  path: /components/dataComponents
-  order: 1
-
-order: 1
----
-
 # Empty 空状态
 
 指当前场景没有对应的数据内容，呈现出的一种状态。

@@ -1,12 +1,3 @@
----
-group:
-  title: 反馈组件
-  path: /components/feedbackComponents
-  order: 1
-
-order: 1
----
-
 # Result 结果页
 
 用于反馈一系列操作任务的处理结果，当有重要操作需告知用户处理结果，且反馈内容较为复杂时使用。

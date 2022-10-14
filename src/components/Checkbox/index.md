@@ -1,12 +1,3 @@
----
-group:
-  title: 表单组件
-  path: /components/formComponents
-  order: 1
-
-order: 3
----
-
 # Checkbox 复选框
 
 表单输入选项，可以单选多选，拥有较大自由度，是一种标记组件。

@@ -1,12 +1,3 @@
----
-group:
-  title: 基础组件
-  path: /components/baseComponents
-  order: 1
-
-order: 1
----
-
 # Icon 图标
 
 语义化的矢量图形。使用图标组件，你需要安装 @ant-design/icons 图标组件包：
