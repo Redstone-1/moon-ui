@@ -10,3 +10,4 @@ export { default as Empty } from './components/Empty';
 export { default as Spin } from './components/Spin';
 export { default as Link } from './components/Link';
 export { default as Result } from './components/Result';
+export { default as VirtualList } from './components/VirtualList';
