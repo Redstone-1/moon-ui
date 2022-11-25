@@ -1,5 +1,5 @@
 import React, { FC, ReactElement, useCallback, useEffect, useState } from 'react';
-import { deepClone } from '../../utils/baseTools';
+import cloneDeep from 'lodash/cloneDeep';
 import Radio from './index';
 import Space from '../Space';
 import Button from '../Button';
@@ -34,7 +34,7 @@ const RadioGroup: FC<RadioGroupProps> = ({
   useEffect(() => {
     if (options && isArray(options)) {
       if (disabled) {
-        const newOptions = deepClone(options) as [];
+        const newOptions = cloneDeep(options) as [];
         newOptions.forEach((option: OptionObject) => (option.disabled = true));
         setNewOptions(newOptions);
         return;

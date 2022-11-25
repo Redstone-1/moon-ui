@@ -1,5 +1,5 @@
 import React, { FC, ReactElement, useCallback, useEffect, useState } from 'react';
-import { deepClone } from '../../utils/baseTools';
+import cloneDeep from 'lodash/cloneDeep';
 import Checkbox from './index';
 import { CheckboxGroupProps, StringNumber, OptionObject } from './interface';
 import { isArray } from '../../utils/is';
@@ -27,7 +27,7 @@ const CheckboxGroup: FC<CheckboxGroupProps> = ({
   useEffect(() => {
     if (options && isArray(options)) {
       if (disabled) {
-        const newOptions = deepClone(options) as [];
+        const newOptions = cloneDeep(options) as [];
         newOptions.forEach((option: OptionObject) => (option.disabled = true));
         setNewOptions(newOptions);
         return;
