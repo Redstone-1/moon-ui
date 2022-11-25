@@ -4,6 +4,7 @@
   z-index: 5000;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .notice-container-left {
@@ -24,20 +25,20 @@
 
 .notice-item {
   opacity: 1;
-  animation: noticeItemShow var(--duration--) ease forwards;
+  animation: notice-item-show var(--duration--) ease forwards;
 }
 
 .notice-item-hidden {
-  animation: noticeItemHidden var(--duration--) ease forwards;
+  animation: notice-item-hidden var(--duration--) ease forwards;
 }
 
-@keyframes noticeItemShow {
+@keyframes notice-item-show {
   to {
     transform: translateY(0);
   }
 }
 
-@keyframes noticeItemHidden {
+@keyframes notice-item-hidden {
   to {
     transform: translateY(-2.5rem);
     opacity: 0;

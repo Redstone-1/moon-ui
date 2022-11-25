@@ -17,6 +17,7 @@ export interface StateProps {
 
 export interface NIProps {
   key: number;
+  id: number;
   show: boolean;
   config: NoticeProps;
   children: React.ReactNode;

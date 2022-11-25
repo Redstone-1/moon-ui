@@ -11,12 +11,20 @@ const NoticeController: NCProps = {
 function NoticeItem(props: NIProps) {
   const [show, setShow] = useState(props.show);
   useEffect(() => {
-    if (props.show === false) setShow(false);
+    if (props.show === false) {
+      setShow(false);
+      return;
+    }
+    const div = document.getElementById(`${props.id}`);
+    if (div) {
+      div.style.width = `${div.clientWidth + 1}px`;
+    }
   }, [props.show]);
   return (
     <div
       className={`notice-item ${show ? '' : 'notice-item-hidden'}`}
       style={{ '--duration--': `${props.config.duration}ms` } as any}
+      id={`${props.id}`}
     >
       {props.children}
     </div>
@@ -130,6 +138,7 @@ class NoticeContainer extends React.Component {
             {nodeList.map((item) => (
               <NoticeItem
                 key={item.id}
+                id={item.id}
                 show={this.state.activeIDList.indexOf(item.id) !== -1}
                 config={item.config}
               >
