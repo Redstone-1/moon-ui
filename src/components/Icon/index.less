@@ -4,16 +4,17 @@
 .icon-box {
   width: 120px;
   height: 80px;
-  padding: 8px 10px 0 10px;
+  padding: 14px 10px 0 10px;
   color: @color-gray-7;
   border: 1px solid @color-gray-3;
   border-radius: 4px;
   &:hover {
     color: #fff;
-    background-color: @color-primary-6;
+    background-color: @color-warning-6;
     cursor: pointer;
     .icon {
       font-size: 50px;
+      transform: translateY(8px);
     }
     .icon-text {
       display: none;
@@ -26,7 +27,7 @@
     transition: all 0.5s @transition-timing-function-overshoot;
   }
   .icon-text {
-    margin: 0;
+    margin: 8px 0 0 0;
     color: @color-gray-7;
     font-size: 12px;
     white-space: pre-wrap;
