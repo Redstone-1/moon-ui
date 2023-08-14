@@ -57,11 +57,6 @@ export default defineConfig({
           'components/Result/index.md',
         ],
       },
-      {
-        title: '导航组件',
-        path: '/components/navigateComponents',
-        children: [],
-      },
     ],
   },
 });
