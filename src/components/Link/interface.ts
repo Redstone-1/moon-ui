@@ -17,6 +17,8 @@ export interface LinkProps {
   disabled?: boolean;
   /** hover 时是否显示底色 */
   hoverable?: boolean;
+  /** 是否显示底线 */
+  bottomLine?: boolean;
   /** link 内容 */
   children?: ReactNode;
 }

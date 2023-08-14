@@ -134,10 +134,20 @@ const SwitchDemo: FC = (): ReactElement => {
   return (
     <Fragment>
       <Space size="small">
-        <Switch size="medium" activeColor="orange" inActiveColor="skyblue" ballColor="#7ebc59" />
+        <Switch size="small" activeColor="orange" inActiveColor="skyblue" ballColor="#7ebc59" />
         <Switch
           value={checked}
           size="medium"
+          activeColor="orange"
+          inActiveColor="skyblue"
+          onChange={setCheckedFun}
+          ballContent={
+            <span style={{ color: 'black', fontSize: '10px' }}>{checked ? '关' : '开'}</span>
+          }
+        />
+        <Switch
+          value={checked}
+          size="large"
           activeColor="orange"
           inActiveColor="skyblue"
           onChange={setCheckedFun}

@@ -13,6 +13,7 @@ const Link: FC<LinkProps> = ({
   disabled = false,
   hoverable = true,
   status,
+  bottomLine = false,
   children = 'Link',
 }): ReactElement => {
   const classes = classNames(
@@ -23,6 +24,7 @@ const Link: FC<LinkProps> = ({
       ['success']: status === 'success',
       ['warning']: status === 'warning',
       ['disabled']: disabled,
+      ['bottom-line']: bottomLine,
     },
     className,
   );

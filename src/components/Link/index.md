@@ -102,6 +102,29 @@ const LinkDemo: FC = (): ReactElement => {
 export default LinkDemo;
 ```
 
+## 显示底线
+
+> 使用 bottomLine 显示底线。
+
+```tsx
+import React, { FC, ReactElement, Fragment } from 'react';
+import { Space, Link } from 'moon-ui';
+
+const LinkDemo: FC = (): ReactElement => {
+  return (
+    <Fragment>
+      <Space size="small">
+        <Link href="#" hoverable={false} bottomLine>
+          Link
+        </Link>
+      </Space>
+    </Fragment>
+  );
+};
+
+export default LinkDemo;
+```
+
 ## 禁用
 
 > 使用 disabled 禁用 Link。
